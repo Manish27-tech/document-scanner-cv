@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocScan CV — Document detection and rectification</title>
+<style>
+:root { --ink:#1d2733; --muted:#5b6b7c; --line:#dce3ea; --accent:#1F6F8B; }
+body { margin:0; font-family:Georgia, 'Times New Roman', serif; color:var(--ink); background:#f7f9fb; }
+main { max-width:1000px; margin:0 auto; padding:48px 24px 64px; }
+h1 { font-size:2.3rem; margin:0 0 6px; }
+p.lead { color:var(--muted); margin:0 0 28px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:24px 0 32px; }
+.card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px; text-align:center; }
+.card span { display:block; color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
+.card strong { display:block; font-size:1.55rem; margin-top:6px; }
+section { background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px; margin-bottom:18px; }
+h2 { font-size:1.15rem; margin:0 0 12px; }
+img { max-width:100%; border-radius:8px; }
+table { width:100%; border-collapse:collapse; font-family:ui-monospace,Consolas,monospace; font-size:.82rem; }
+th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
+th { color:var(--muted); font-weight:600; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:720px) { .grid2 { grid-template-columns:1fr; } }
+footer { color:var(--muted); font-size:.85rem; text-align:center; margin-top:28px; }
+</style>
+</head>
+<body>
+<main>
+<h1>DocScan CV</h1>
+<p class="lead">Classical computer vision for document capture: corner detection,
+perspective rectification and geometry-based evaluation on synthetic scenes.</p>
+<div class="cards"><div class="card"><span>Strict success</span><strong>99.2%</strong></div>
+<div class="card"><span>Mean IoU</span><strong>0.895</strong></div>
+<div class="card"><span>Median corner error</span><strong>0.020</strong></div>
+<div class="card"><span>Mean runtime</span><strong>76.0 ms</strong></div>
+<div class="card"><span>Scenes</span><strong>120</strong></div></div>
+
+<section>
+<h2>Detection by condition</h2>
+<table><thead><tr><th>condition</th><th>samples</th><th>success_rate</th><th>corner_success_rate</th><th>iou_success_rate</th><th>median_corner_error</th><th>mean_iou</th><th>mean_runtime_ms</th></tr></thead><tbody><tr><td>clean</td><td>20</td><td>1.0</td><td>1.0</td><td>1.0</td><td>0.02</td><td>0.899</td><td>75.916</td></tr>
+<tr><td>rotate</td><td>20</td><td>1.0</td><td>1.0</td><td>1.0</td><td>0.02</td><td>0.898</td><td>75.551</td></tr>
+<tr><td>blur</td><td>20</td><td>1.0</td><td>1.0</td><td>1.0</td><td>0.019</td><td>0.906</td><td>73.94</td></tr>
+<tr><td>noise</td><td>20</td><td>0.95</td><td>0.95</td><td>0.95</td><td>0.02</td><td>0.872</td><td>78.767</td></tr>
+<tr><td>shadow</td><td>20</td><td>1.0</td><td>1.0</td><td>1.0</td><td>0.019</td><td>0.9</td><td>76.278</td></tr>
+<tr><td>lowcontrast</td><td>20</td><td>1.0</td><td>1.0</td><td>1.0</td><td>0.02</td><td>0.896</td><td>75.345</td></tr></tbody></table>
+</section>
+
+<section>
+<h2>Examples</h2>
+<img src="figures/02_detection_examples.png" alt="Detection examples">
+</section>
+
+<section>
+<h2>Robustness</h2>
+<div class="grid2">
+<img src="figures/06_robustness_blur_noise.png" alt="Blur and noise robustness">
+<img src="figures/07_robustness_rotation_shadow.png" alt="Rotation and shadow robustness">
+</div>
+</section>
+
+<section>
+<h2>Failure analysis</h2>
+<img src="figures/08_failure_cases.png" alt="Failure cases">
+</section>
+
+<footer>Built with OpenCV and NumPy · Manish Pandey · 2026</footer>
+</main>
+</body>
+</html>
