@@ -1,0 +1,19 @@
+{
+  "samples": 120,
+  "success_rate": 0.9917,
+  "corner_success_rate": 0.9917,
+  "iou_success_rate": 0.9917,
+  "mean_corner_error": 0.021,
+  "median_corner_error": 0.0196,
+  "p95_corner_error": 0.0224,
+  "mean_iou": 0.8953,
+  "median_iou": 0.9001,
+  "min_iou": 0.3642,
+  "max_iou": 0.9162,
+  "mean_runtime_ms": 75.966,
+  "p95_runtime_ms": 83.648,
+  "methods": {
+    "brightness": 88,
+    "edges": 32
+  }
+}

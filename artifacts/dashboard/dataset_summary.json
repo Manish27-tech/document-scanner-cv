@@ -1,0 +1,21 @@
+{
+  "samples": 120,
+  "conditions": {
+    "clean": 20,
+    "rotate": 20,
+    "blur": 20,
+    "noise": 20,
+    "shadow": 20,
+    "lowcontrast": 20
+  },
+  "canvas": [
+    1100,
+    850
+  ],
+  "page": [
+    700,
+    1000
+  ],
+  "success_threshold": 0.05,
+  "iou_threshold": 0.8
+}
