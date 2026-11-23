@@ -1,0 +1,7 @@
+condition,samples,success_rate,corner_success_rate,iou_success_rate,median_corner_error,mean_iou,mean_runtime_ms
+clean,20,1.0,1.0,1.0,0.02,0.8993,75.916
+rotate,20,1.0,1.0,1.0,0.02,0.8983,75.551
+blur,20,1.0,1.0,1.0,0.019,0.9057,73.94
+noise,20,0.95,0.95,0.95,0.02,0.8724,78.767
+shadow,20,1.0,1.0,1.0,0.019,0.9002,76.278
+lowcontrast,20,1.0,1.0,1.0,0.02,0.896,75.345
