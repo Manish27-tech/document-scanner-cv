@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "DocScan CV: Document Detection and Perspective Rectification"
+abstract: "Classical computer vision for finding document corners and rectifying pages, evaluated on a deterministic synthetic corpus."
+authors:
+  - family-names: Pandey
+    given-names: Manish
+version: 1.0.0
+date-released: 2026-11-23
+license: MIT
+repository-code: "https://github.com/Manish27-tech/document-scanner-cv"
+keywords:
+  - computer-vision
+  - document-detection
+  - opencv
+  - perspective-transform
+  - image-processing
